@@ -9,15 +9,21 @@ class Cat
 
   def eats_at
     if meal_time <= 12
-      puts "#{meal_time} AM"
+      return meal_time.to_s + "AM"
     else
       time = meal_time - 12
-      puts "#{time} PM"
+      return time.to_s + "PM"
     end
   end
+
+  def meow
+    "Meow name is #{@name} and meow eat #{@preferred_food} at #{eats_at} and I guess also all other times too, meow!"
+  end
+
 end
 
 jasper = Cat.new("Jasper", "chicken", 9)
 prima  = Cat.new("Prima", "salmon", 17)
 
-puts prima.eats_at
+puts jasper.meow
+puts prima.meow
