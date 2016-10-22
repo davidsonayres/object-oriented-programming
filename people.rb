@@ -24,3 +24,9 @@ christina = Student.new("Christina")
 
 puts chris.greeting
 puts christina.greeting
+
+puts chris.teach
+puts christina.learn
+
+puts christina.teach
+# this doesn't work because the instance method teach can only be applied to instances within the Instructor class
