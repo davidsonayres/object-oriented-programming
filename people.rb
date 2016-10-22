@@ -1,16 +1,26 @@
-class Person(name)
-  @name = name
+class Person
+  def initialize(name)
+    @name = name
+  end
   def greeting
-    "Hi, my name is #{@name}"
+    puts "Hi, my name is #{@name}."
   end
 end
 
-class Student
+class Student < Person
   def learn
-    "I get it!"
+    puts "I get it!"
+  end
 end
 
-class Instructor
+class Instructor < Person
   def teach
-    "Everything in Ruby is an Object"
+    puts "Everything in Ruby is an Object"
+  end
 end
+
+chris     = Instructor.new("Chris")
+christina = Student.new("Christina")
+
+puts chris.greeting
+puts christina.greeting
