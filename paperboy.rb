@@ -9,9 +9,6 @@ class Paperboy
   end
 
   def quota
-    if @experience == 0
-      return 50
-    else
       return 50 + (@experience / 2)
     end
   end
@@ -24,7 +21,7 @@ class Paperboy
       money = (quota * 0.25) + (total_delivered - quota) * 0.50
     end
     @experience += total_delivered
-    @earnings = @earnings + money
+    @earnings += money
   end
 
   def report
