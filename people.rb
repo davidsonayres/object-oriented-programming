@@ -1,3 +1,10 @@
+class Person(name)
+  @name = name
+  def greeting
+    "Hi, my name is #{@name}"
+  end
+end
+
 class Student
   def learn
     "I get it!"
