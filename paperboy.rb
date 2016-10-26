@@ -10,7 +10,6 @@ class Paperboy
 
   def quota
       return 50 + (@experience / 2)
-    end
   end
 
   def deliver(start_address, end_address)
@@ -29,9 +28,12 @@ class Paperboy
   end
 end
 
-tommy = Paperboy.new("Tommy", 0)
+tommy = Paperboy.new("Tommy", 90)
 
 puts tommy.quota
-puts tommy.deliver(101, 160)
+puts tommy.deliver(101, 201)
 puts tommy.earnings
+puts tommy.report
+
+puts tommy.deliver(1, 400)
 puts tommy.report
